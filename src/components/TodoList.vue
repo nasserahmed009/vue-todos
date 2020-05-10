@@ -32,32 +32,42 @@ import CreateTodo from "./CreateTodo.vue";
 
 export default {
   props: {
-    listName: String,
+    listName: String
+  },
+  mounted() {
+    // check if there's some todos in the localStorage and add them to the state
+    const todos = JSON.parse(localStorage.getItem("todos"));
+    if (todos) this.todos = todos;
   },
   data() {
     return {
-      todos: [
-        { description: "Do the dishes", completed: false },
-        { description: "Take out the trash", completed: false },
-        { description: "Finish doing laundry", completed: false },
-      ],
+      todos: []
     };
   },
   methods: {
     addTodo(newTodo) {
       this.todos.push({ description: newTodo, completed: false });
+      this.updateLocalStorage();
     },
     toggleTodo(todo) {
       todo.completed = !todo.completed;
+      this.updateLocalStorage();
     },
     deleteTodo(deletedTodo) {
       this.todos = this.todos.filter(todo => todo !== deletedTodo);
+      this.updateLocalStorage();
     },
     editTodo(todo, newTodoDescription) {
       todo.description = newTodoDescription;
+      this.updateLocalStorage();
     },
+    // updating the local storage with the current state
+    updateLocalStorage() {
+      const todos = JSON.stringify(this.todos);
+      localStorage.setItem("todos", todos);
+    }
   },
-  components: { Todo, CreateTodo },
+  components: { Todo, CreateTodo }
 };
 </script>
 
