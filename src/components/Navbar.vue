@@ -3,10 +3,10 @@
     <div class="container">
       <!-- brand logo -->
       <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto" href="/">
+        <router-link :to="{ name: 'Todos' }" class="navbar-brand mx-auto">
           <i class="fas fa-check-circle"></i>
           Do it
-        </a>
+        </router-link>
       </div>
 
       <!-- navbar toogle btn -->
@@ -20,16 +20,31 @@
       </button>
 
       <!-- navbar links -->
-      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <div
+        class="navbarLinks navbar-collapse collapse w-100 order-3 dual-collapse2"
+      >
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Todos</a>
+          <li class="nav-item mt-1">
+            <router-link :to="{ name: 'Todos' }" class="nav-link p-2">
+              Todos
+            </router-link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Done todos</a>
+          <li class="nav-item mt-1">
+            <router-link :to="{ name: 'DoneTodos' }" class="nav-link p-2">
+              Done Todos
+            </router-link>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 </template>
+
+<style lang="scss" scoped>
+.navbarLinks .router-link-exact-active {
+  color: #fff !important;
+  background: #2196f3;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+}
+</style>

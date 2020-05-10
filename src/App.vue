@@ -1,7 +1,7 @@
 <template>
   <div>
-    <navbar />
-    <todo-list list-name="My to-dos" />
+    <router-view />
+    <!-- <todo-list list-name="My to-dos" /> -->
   </div>
 </template>
 
@@ -9,8 +9,8 @@
 export default {
   name: "App",
   components: {
-    TodoList: () => import("@/components/TodoList.vue"),
-    Navbar: () => import("@/components/Navbar.vue")
+    // TodoList: () => import("@/components/TodoList.vue")
+    // Navbar: () => import("@/components/Navbar.vue")
   }
 };
 </script>
