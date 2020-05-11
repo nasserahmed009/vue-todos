@@ -8,7 +8,8 @@
     />
 
     <button
-      class="btn border-0 flex-grow-1 text-left shadow-none toggle-todo"
+      class="btn border-0 flex-grow-1 text-left shadow-none toggle-t
+      odo"
       :class="{ completed }"
       @click="$emit('on-toggle')"
       v-if="!isEditing"

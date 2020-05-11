@@ -28,6 +28,9 @@
             @on-delete="deleteTodo(todo)"
             @on-edit="editTodo(todo, $event)"
           />
+          <li class=" list-group-item" v-if="filteredTodos.length === 0">
+            There's nothing to show here.
+          </li>
         </ul>
       </div>
     </div>
