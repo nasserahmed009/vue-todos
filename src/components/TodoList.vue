@@ -53,7 +53,7 @@ export default {
   },
   mounted() {
     // check if there's some todos in the localStorage and add them to the state
-    const todos = JSON.parse(localStorage.getItem("todos"));
+    const todos = JSON.parse(localStorage.getItem("doit-todos"));
     if (todos) this.todos = todos;
   },
   data() {
@@ -75,6 +75,7 @@ export default {
   },
   methods: {
     addTodo(newTodo) {
+      //adding unique identifier for each todo
       const id = Math.random()
         .toString(36)
         .substr(2, 9);
@@ -97,7 +98,7 @@ export default {
     // updating the local storage with the current state
     updateLocalStorage() {
       const todos = JSON.stringify(this.todos);
-      localStorage.setItem("todos", todos);
+      localStorage.setItem("doit-todos", todos);
     }
   },
   components: { Todo, CreateTodo }
