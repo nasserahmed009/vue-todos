@@ -1,17 +1,13 @@
 <template>
   <div>
     <router-view />
-    <!-- <todo-list list-name="My to-dos" /> -->
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
-  components: {
-    // TodoList: () => import("@/components/TodoList.vue")
-    // Navbar: () => import("@/components/Navbar.vue")
-  }
+  components: {}
 };
 </script>
 

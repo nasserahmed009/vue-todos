@@ -8,7 +8,7 @@
     />
 
     <button
-      class="btn border-0 flex-grow-1 text-left shadow-none toggleTodo"
+      class="btn border-0 flex-grow-1 text-left shadow-none toggle-todo"
       :class="{ completed }"
       @click="$emit('on-toggle')"
       v-if="!isEditing"
@@ -32,7 +32,7 @@
     </button>
     <button
       @click="$emit('on-delete')"
-      class="btn btn-outline-danger border-0 deleteTodo"
+      class="btn btn-outline-danger border-0 delete-todo"
     >
       <span class="fa fa-trash"></span>
     </button>

@@ -21,7 +21,7 @@
 
       <!-- navbar links -->
       <div
-        class="navbarLinks navbar-collapse collapse w-100 order-3 dual-collapse2"
+        class="navbar-links navbar-collapse collapse w-100 order-3 dual-collapse2"
       >
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mt-1">
@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navbarLinks .router-link-exact-active {
+.navbar-links .router-link-exact-active {
   color: #fff !important;
   background: #2196f3;
   border-radius: 5px;

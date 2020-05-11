@@ -18,7 +18,7 @@ describe("Testing Todo", () => {
   });
 
   it("renders todo description correctly", () => {
-    const toggleBtn = wrapper.find(".toggleTodo");
+    const toggleBtn = wrapper.find(".toggle-todo");
     const span = toggleBtn.find("span");
     expect(span.text()).toBe("test todo");
   });
@@ -27,7 +27,7 @@ describe("Testing Todo", () => {
     wrapper.setData({
       isEditing: false
     }); //to assure that the button exists
-    const toggleBtn = wrapper.find(".toggleTodo");
+    const toggleBtn = wrapper.find(".toggle-todo");
     toggleBtn.trigger("click");
     expect(wrapper.emitted("on-toggle").length).toBe(1);
   });
@@ -43,7 +43,7 @@ describe("Testing Todo", () => {
   });
 
   it("emits on-delete event correctly", () => {
-    const deleteTodoBtn = wrapper.find(".deleteTodo");
+    const deleteTodoBtn = wrapper.find(".delete-todo");
     deleteTodoBtn.trigger("click");
     expect(wrapper.emitted("on-delete").length).toBe(1);
   });

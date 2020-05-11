@@ -35,9 +35,6 @@
 </template>
 
 <script>
-import Todo from "./Todo.vue";
-import CreateTodo from "./CreateTodo.vue";
-
 export default {
   props: {
     listName: String,
@@ -101,7 +98,10 @@ export default {
       localStorage.setItem("doit-todos", todos);
     }
   },
-  components: { Todo, CreateTodo }
+  components: {
+    Todo: () => import("@/components/Todo.vue"),
+    CreateTodo: () => import("@/components/CreateTodo.vue")
+  }
 };
 </script>
 
