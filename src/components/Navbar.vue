@@ -45,6 +45,16 @@
   </nav>
 </template>
 
+<script>
+export default {
+  name: "Navbar",
+  // data property is required for jest to add the component to test coverage
+  data() {
+    return {};
+  }
+};
+</script>
+
 <style lang="scss" scoped>
 .navbarLinks .router-link-exact-active {
   color: #fff !important;

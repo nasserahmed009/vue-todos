@@ -3,14 +3,14 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/Todo.vue</title>
+    <title>Code coverage report for components/Navbar.vue</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -18,34 +18,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> Todo.vue</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">components</a> Navbar.vue</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -121,21 +121,7 @@
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a>
-<a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -179,7 +165,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -188,20 +173,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -215,82 +187,68 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-  &lt;li class="d-flex align-items-center list-group-item"&gt;
-    &lt;input
-      class=""
-      type="checkbox"
-      @change="$emit('on-toggle')"
-      :checked="completed"
-    /&gt;
+  &lt;nav class="navbar navbar-expand-md navbar-dark bg-dark"&gt;
+    &lt;div class="container"&gt;
+      &lt;!-- brand logo --&gt;
+      &lt;div class="mx-auto order-0"&gt;
+        &lt;router-link :to="{ name: 'Todos' }" class="navbar-brand mx-auto"&gt;
+          &lt;i class="fas fa-check-circle"&gt;&lt;/i&gt;
+          Do it
+        &lt;/router-link&gt;
+      &lt;/div&gt;
 &nbsp;
-    &lt;button
-      class="btn border-0 flex-grow-1 text-left shadow-none toggleTodo"
-      :class="{ completed }"
-      @click="$emit('on-toggle')"
-      v-if="!isEditing"
-    &gt;
-      &lt;span&gt;{{ description }}&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;form v-else class="flex-grow-1" @submit.prevent="finishEditing()"&gt;
-      &lt;input
-        type="text"
-        class="form-control"
-        v-model="newTodoDescription"
-        @blur="finishEditing()"
-        ref="newTodo"
-      /&gt;
-    &lt;/form&gt;
-    &lt;button
-      @click="startEditing()"
-      class="btn btn-outline-primary border-0 ml-2"
-    &gt;
-      &lt;span class="fa fa-edit"&gt;&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;button
-      @click="$emit('on-delete')"
-      class="btn btn-outline-danger border-0 deleteTodo"
-    &gt;
-      &lt;span class="fa fa-trash"&gt;&lt;/span&gt;
-    &lt;/button&gt;
-  &lt;/li&gt;
+      &lt;!-- navbar toogle btn --&gt;
+      &lt;button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".dual-collapse2"
+      &gt;
+        &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+&nbsp;
+      &lt;!-- navbar links --&gt;
+      &lt;div
+        class="navbarLinks navbar-collapse collapse w-100 order-3 dual-collapse2"
+      &gt;
+        &lt;ul class="navbar-nav ml-auto"&gt;
+          &lt;li class="nav-item mt-1"&gt;
+            &lt;router-link :to="{ name: 'Todos' }" class="nav-link p-2"&gt;
+              All Todos
+            &lt;/router-link&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item mt-1"&gt;
+            &lt;router-link :to="{ name: 'UndoneTodos' }" class="nav-link p-2"&gt;
+              Undone Todos
+            &lt;/router-link&gt;
+          &lt;/li&gt;
+          &lt;li class="nav-item mt-1"&gt;
+            &lt;router-link :to="{ name: 'DoneTodos' }" class="nav-link p-2"&gt;
+              Done Todos
+            &lt;/router-link&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
 &lt;/template&gt;
 &nbsp;
 &lt;script&gt;
 export default {
+  name: "Navbar",
+  // data property is required for jest to add the component to test coverage
   data() {
-    return {
-      isEditing: false,
-      newTodoDescription: ""
-    };
-  },
-  props: {
-    description: String,
-    completed: Boolean
-  },
-  methods: {
-    startEditing() {
-      if (this.isEditing) {
-        this.finishEditing();
-      } else {
-        this.newTodoDescription = this.description;
-        this.isEditing = true;
-        this.$nextTick(() =&gt; this.$refs.newTodo.focus());
-      }
-    },
-    finishEditing() {
-      this.isEditing = false;
-      this.$emit("on-edit", this.newTodoDescription);
-    }
+    return {};
   }
 };
 &lt;/script&gt;
 &nbsp;
 &lt;style lang="scss" scoped&gt;
-.completed {
-  text-decoration: line-through;
-}
-input[type="checkbox"] {
-  cursor: pointer;
+.navbarLinks .router-link-exact-active {
+  color: #fff !important;
+  background: #2196f3;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
 }
 &lt;/style&gt;
 &nbsp;</pre></td></tr></table></pre>
@@ -300,17 +258,17 @@ input[type="checkbox"] {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon May 11 2020 14:34:24 GMT+0200 (Eastern European Standard Time)
+                at Mon May 11 2020 15:17:25 GMT+0200 (Eastern European Standard Time)
             </div>
         </div>
-        <script src="../../prettify.js"></script>
+        <script src="../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../sorter.js"></script>
-        <script src="../../block-navigation.js"></script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
     </body>
 </html>
     

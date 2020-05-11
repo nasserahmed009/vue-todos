@@ -63,10 +63,14 @@ export default {
   },
   computed: {
     filteredTodos() {
-      if (this.filterTodos === "all") return this.todos;
-      else if (this.filterTodos === "done")
-        return this.todos.filter(todo => todo.completed);
-      else return this.todos.filter(todo => !todo.completed);
+      switch (this.filterTodos) {
+        case "done":
+          return this.todos.filter(todo => todo.completed);
+        case "undone":
+          return this.todos.filter(todo => !todo.completed);
+        default:
+          return this.todos;
+      }
     }
   },
   methods: {

@@ -24,14 +24,18 @@ describe("Testing Todo", () => {
   });
 
   it("emits on-toggle when todo button is clicked", () => {
-    wrapper.setData({ isEditing: false }); //to assure that the button exists
+    wrapper.setData({
+      isEditing: false
+    }); //to assure that the button exists
     const toggleBtn = wrapper.find(".toggleTodo");
     toggleBtn.trigger("click");
     expect(wrapper.emitted("on-toggle").length).toBe(1);
   });
 
   it("finish editing and emit on-edit event correctly", () => {
-    wrapper.setData({ isEditing: true });
+    wrapper.setData({
+      isEditing: true
+    });
     wrapper.vm.finishEditing();
 
     expect(wrapper.vm.isEditing).toBe(false);
@@ -46,14 +50,20 @@ describe("Testing Todo", () => {
 
   it("starts editing correctly", () => {
     // in case of isEditing is true
-    wrapper.setData({ isEditing: true });
+    wrapper.setData({
+      isEditing: true
+    });
     const finishEditingFn = jest.fn();
-    wrapper.setMethods({ finishEditing: finishEditingFn });
+    wrapper.setMethods({
+      finishEditing: finishEditingFn
+    });
     wrapper.vm.startEditing();
     expect(finishEditingFn).toHaveBeenCalled();
 
     // in case of isEditing is false
-    wrapper.setData({ isEditing: false });
+    wrapper.setData({
+      isEditing: false
+    });
     wrapper.vm.startEditing();
     expect(wrapper.vm.newTodoDescription).toEqual(wrapper.vm.description);
     expect(wrapper.vm.isEditing).toBeTruthy();

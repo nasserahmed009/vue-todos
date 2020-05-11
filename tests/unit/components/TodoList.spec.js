@@ -86,4 +86,40 @@ describe("Testing TodoList", () => {
       expect.objectContaining({ description: "test todo", completed: true })
     );
   });
+
+  it("filter done todos correctly", () => {
+    wrapper.setData({
+      todos: [
+        { id: 1, description: "Buy some milk!", completed: false },
+        { id: 2, description: "Watch the new episode", completed: true }
+      ]
+    });
+    wrapper.setProps({ filterTodos: "done" });
+
+    expect(wrapper.vm.filteredTodos.length).toBeLessThanOrEqual(
+      wrapper.vm.todos.length
+    );
+
+    wrapper.vm.filteredTodos.forEach(todo => {
+      expect(todo.completed).toBe(true);
+    });
+  });
+
+  it("filter undone todos correctly", () => {
+    wrapper.setData({
+      todos: [
+        { id: 1, description: "Buy some milk!", completed: false },
+        { id: 2, description: "Watch the new episode", completed: true }
+      ]
+    });
+    wrapper.setProps({ filterTodos: "undone" });
+
+    expect(wrapper.vm.filteredTodos.length).toBeLessThanOrEqual(
+      wrapper.vm.todos.length
+    );
+
+    wrapper.vm.filteredTodos.forEach(todo => {
+      expect(todo.completed).toBe(false);
+    });
+  });
 });
