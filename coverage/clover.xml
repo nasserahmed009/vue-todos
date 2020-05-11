@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1589203045268" clover="3.2.0">
-  <project timestamp="1589203045268" name="All files">
-    <metrics statements="38" coveredstatements="38" conditionals="9" coveredconditionals="9" methods="23" coveredmethods="23" elements="70" coveredelements="70" complexity="0" loc="38" ncloc="38" packages="2" files="8" classes="8"/>
+<coverage generated="1589204078755" clover="3.2.0">
+  <project timestamp="1589204078755" name="All files">
+    <metrics statements="39" coveredstatements="39" conditionals="9" coveredconditionals="9" methods="24" coveredmethods="24" elements="72" coveredelements="72" complexity="0" loc="39" ncloc="39" packages="2" files="9" classes="9"/>
     <package name="components">
       <metrics statements="34" coveredstatements="34" conditionals="9" coveredconditionals="9" methods="19" coveredmethods="19"/>
       <file name="CreateTodo.vue" path="/Users/ahmed/Desktop/vue-todos/src/components/CreateTodo.vue">
@@ -52,10 +52,14 @@
       </file>
     </package>
     <package name="views">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
       <file name="DoneTodos.vue" path="/Users/ahmed/Desktop/vue-todos/src/views/DoneTodos.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="13" count="2" type="stmt"/>
+      </file>
+      <file name="Error404.vue" path="/Users/ahmed/Desktop/vue-todos/src/views/Error404.vue">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="14" count="3" type="stmt"/>
       </file>
       <file name="Layout.vue" path="/Users/ahmed/Desktop/vue-todos/src/views/Layout.vue">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

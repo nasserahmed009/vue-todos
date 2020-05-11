@@ -20,6 +20,12 @@ const routes = [
         name: "UndoneTodos",
         component: () => import("@/views/UndoneTodos.vue"),
         meta: { title: "Undone Todos" }
+      },
+      {
+        path: "*",
+        name: "error404",
+        component: () => import("@/views/Error404"),
+        meta: { title: "Page Not Found" }
       }
     ]
   }
