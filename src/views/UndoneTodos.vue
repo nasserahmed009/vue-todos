@@ -1,8 +1,8 @@
 <template>
   <div>
     <todo-list
-      listName="You have finished all of this .."
-      filterTodos="done"
+      listName="Things you have to do .."
+      filterTodos="undone"
     ></todo-list>
   </div>
 </template>

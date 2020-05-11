@@ -1,19 +1,27 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-12 py-5">
-        <h1>{{ listName }}</h1>
+      <div class="col-12">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-chart-line mx-3"></i>
+          {{ listName }}
+        </h1>
       </div>
     </div>
-    <div class="row mb-3">
+
+    <div
+      class="row mb-3 justify-content-md-center"
+      v-if="filterTodos != 'done'"
+    >
       <create-todo @on-new-todo="addTodo($event)" />
     </div>
-    <div class="row">
+
+    <div class="row justify-content-md-center">
       <div class="col-12 col-sm-10 col-lg-6">
         <ul class="list-group">
           <todo
-            v-for="(todo, index) in todos"
-            :key="index"
+            v-for="todo in filteredTodos"
+            :key="todo.id"
             :description="todo.description"
             :completed="todo.completed"
             @on-toggle="toggleTodo(todo)"
@@ -32,7 +40,16 @@ import CreateTodo from "./CreateTodo.vue";
 
 export default {
   props: {
-    listName: String
+    listName: String,
+    // a prop that filter the todos list to "done" or "undone" or "all"
+    filterTodos: {
+      type: String,
+      default: "all", // default value is to show all the todos
+      validator: value => {
+        // The value must match one of these strings
+        return ["done", "undone", "all"].indexOf(value) !== -1;
+      }
+    }
   },
   mounted() {
     // check if there's some todos in the localStorage and add them to the state
@@ -44,9 +61,21 @@ export default {
       todos: []
     };
   },
+  computed: {
+    filteredTodos() {
+      if (this.filterTodos === "all") return this.todos;
+      else if (this.filterTodos === "done")
+        return this.todos.filter(todo => todo.completed);
+      else return this.todos.filter(todo => !todo.completed);
+    }
+  },
   methods: {
     addTodo(newTodo) {
-      this.todos.push({ description: newTodo, completed: false });
+      const id = Math.random()
+        .toString(36)
+        .substr(2, 9);
+
+      this.todos.push({ id, description: newTodo, completed: false });
       this.updateLocalStorage();
     },
     toggleTodo(todo) {

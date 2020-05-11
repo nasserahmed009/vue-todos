@@ -26,7 +26,12 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mt-1">
             <router-link :to="{ name: 'Todos' }" class="nav-link p-2">
-              Todos
+              All Todos
+            </router-link>
+          </li>
+          <li class="nav-item mt-1">
+            <router-link :to="{ name: 'UndoneTodos' }" class="nav-link p-2">
+              Undone Todos
             </router-link>
           </li>
           <li class="nav-item mt-1">

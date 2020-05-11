@@ -1,6 +1,9 @@
 <template>
   <div>
-    <todo-list listName="Things I have to do .."></todo-list>
+    <todo-list
+      listName="All of your tasks are listed here .."
+      filterTodos="all"
+    ></todo-list>
   </div>
 </template>
 
