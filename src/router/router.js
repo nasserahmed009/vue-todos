@@ -9,4 +9,10 @@ const router = new Router({
   routes: routes
 });
 
+// update the page title on chnaging the route
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+  next();
+});
+
 export default router;

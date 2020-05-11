@@ -6,17 +6,20 @@ const routes = [
       {
         path: "",
         name: "Todos",
-        component: () => import("@/views/Todos.vue")
+        component: () => import("@/views/Todos.vue"),
+        meta: { title: "All Todos" }
       },
       {
         path: "/done-todos",
         name: "DoneTodos",
-        component: () => import("@/views/DoneTodos.vue")
+        component: () => import("@/views/DoneTodos.vue"),
+        meta: { title: "Done Todos" }
       },
       {
         path: "/undone-todos",
         name: "UndoneTodos",
-        component: () => import("@/views/UndoneTodos.vue")
+        component: () => import("@/views/UndoneTodos.vue"),
+        meta: { title: "Undone Todos" }
       }
     ]
   }
